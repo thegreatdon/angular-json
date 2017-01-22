@@ -1,0 +1,11 @@
+{
+   "data" :[
+        {
+        "call":"WAMU-FM",
+        "state":"DC",
+        "city":"Washington",
+        "member":false,
+        "zip":"20009"
+        }
+   ] 
+}

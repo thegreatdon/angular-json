@@ -1,0 +1,13 @@
+body{
+  font-family: 'Lucida Sans';
+}
+
+#oppdiv{margin:auto;width:870px;}
+    #showdiv{width:460px;float:left;};
+        .checkspan{width:300px;float:left;}
+        .pricespan{width:100px;text-align:left;float:right;}
+        .shorow{width:400px;cursor:pointer;margin-bottom:5px;}
+    #receiptdiv{font-family:verdana;float:right;text-align:left;font-size:12px;}
+        .receipttitle{float:left;width:280px;}
+        .receiptprice{float:right;text-align:left;width:80px;}
+    .subtotrow{margin-top:8px;}

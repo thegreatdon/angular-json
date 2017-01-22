@@ -1,0 +1,16 @@
+
+#showdiv{width:460px;float:left;};
+
+    .checkspan{width:300px;float:left;}
+    .pricespan{width:100px;text-align:left;float:right;}
+    .shorow{width:400px;cursor:pointer;margin-bottom:5px;}
+
+#receiptdiv{font-size:12px;float:right;text-align:left;font-size:12px;width:410px;}
+/*overflow-y:scroll;height:250px;*/
+    .receiptrow{margin-bottom:8px;}
+        .receipttitle{float:left;width:280px;}
+        .receiptprice{float:right;text-align:left;width:110px;}
+
+.subtotrow{padding-top:18px;}
+        .subtotal{text-align:right;font-weight:bold;}
+        .subtotalprice{float:right;text-align:left;width:110px;font-weight:bold;}

@@ -1,0 +1,53 @@
+
+<div id="showdiv">
+
+    <div *ngFor = "let show of products" class="shorow" (click)="clickShow(show)">
+        <span class="checkspan" *ngIf = "show.name =='Morning Edition'"><input type="checkbox" [(ngModel)]="show.include">{{show.name}}</span>
+        <span class="pricespan" *ngIf = "show.name =='Morning Edition'">{{show.price | currency:'USD':true}}</span>
+    </div>
+    <div *ngFor = "let show of products" class="shorow" (click)="clickShow(show)">
+        <span class="checkspan" *ngIf = "show.name =='All Things Considered'"><input type="checkbox" [(ngModel)]="show.include">{{show.name}}</span>
+        <span class="pricespan" *ngIf = "show.name =='All Things Considered'">{{show.price | currency:'USD':true}}</span>
+    </div>
+    <div *ngFor = "let show of products" class="shorow" (click)="clickShow(show)">
+        <span class="checkspan"   *ngIf = "show.name != 'Morning Edition' && show.name != 'All Things Considered'"><input type="checkbox" [(ngModel)]="show.include">{{show.name}}</span>
+        <span class="pricespan"   *ngIf = "show.name != 'Morning Edition' && show.name != 'All Things Considered'">{{show.price | currency:'USD':true}}</span>
+    </div>
+
+</div>
+
+<div id="receiptdiv">
+memadmfee: {{memadmfee}}
+
+    <div class="receiptrow" *ngFor = "let show of products">
+        <span class="receipttitle" *ngIf = "show.include === true && show.name == 'Morning Edition'">{{show.name}}</span>
+        <span class="receiptprice" *ngIf = "show.include === true && show.name == 'Morning Edition'">{{show.price | currency:'USD':true}}</span>
+    </div>
+    <div class="receiptrow" *ngFor = "let show of products">
+        <span class="receipttitle" *ngIf = "show.include === true && show.name == 'All Things Considered'">{{show.name}}</span>
+        <span class="receiptprice" *ngIf = "show.include === true && show.name == 'All Things Considered'">{{show.price | currency:'USD':true}}</span>
+    </div>
+    <div class="receiptrow" *ngFor = "let show of products">
+        <span class="receipttitle" *ngIf = "show.include === true && show.name != 'Morning Edition' && show.name != 'All Things Considered'">{{show.name}}</span>
+        <span class="receiptprice" *ngIf = "show.include === true && show.name != 'Morning Edition' && show.name != 'All Things Considered'">{{show.price | currency:'USD':true}}</span>
+    </div>
+   
+    <div class="subtotrow" *ngIf = "member == false">
+        <span class="subtotal">Subtotal:</span>
+        <span class="subtotalprice"> {{subtotal | currency:'USD':true}}</span>
+        <br/>
+        <span class="subtotal">Admin Fee:</span>
+        <span class="subtotalprice"> {{adminfee | currency:'USD':true}}</span>   
+    </div>
+    <div class="totalpricerow">
+        <span class="subtotal">Total:</span>
+        <span class="subtotalprice"> {{totalprice | currency:'USD':true}}</span>
+    </div>
+
+
+
+</div>
+<div style="clear:both;"></div>
+
+<!--{{readShows()}}-->
+<!--|json-->
